@@ -1,4 +1,4 @@
-ame: Deploy Schema to Registry
+name: Deploy Schema to Registry
 
 on:
   watch:

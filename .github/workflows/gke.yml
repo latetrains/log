@@ -1,4 +1,4 @@
-ame: Deployment to GKE
+name: Deployment to GKE
 
 on:
   release:
