@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "log_value",
+  "namespace": "io.latetrains.log",
+  "fields": [
+    {
+      "name": "level",
+      "type": "string",
+      "doc": "The level of the log message - should be generated at the source dependant on the severity"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "doc": "The message of the log"
+    },
+    {
+      "name": "origin",
+      "type": "string",
+      "doc": "The microservice or application that generated this log message"
+    },
+    {
+      "name": "origin_generated_at",
+      "type": "long",
+      "doc": "A unix timestamp of the time the log was sent from the origin application"
+    },
+    {
+      "name": "connection_id",
+      "type": "string",
+      "doc": "A unique identifier for the connection / user so we can trace it through the services"
+    }
+  ],
+  "doc:": "A basic schema for storing Log messages"
+}

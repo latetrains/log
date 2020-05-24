@@ -1,0 +1,28 @@
+{
+  "name": "log",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "tsc && node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "avro-schema-registry": "^2.1.0",
+    "avsc": "^5.4.21",
+    "dotenv": "^8.2.0",
+    "kafka-node": "^5.0.0",
+    "logzio-nodejs": "^2.0.1",
+    "winston-logzio": "^5.1.2"
+  }
+}

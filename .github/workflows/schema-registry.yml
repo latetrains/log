@@ -1,0 +1,22 @@
+ame: Deploy Schema to Registry
+
+on:
+  release:
+    types: [created]
+
+env:
+  SCHEMA_REGISTRY_URL: ${{ secrets.SCHEMA_REGISTRY_URL }}
+  SCHEMA_REGISTY_MESSAGE_SUBJECT: ${{ secrets.SCHEMA_REGISTY_MESSAGE_SUBJECT }}
+  SCHEMA_REGISTRY_API_KEY: ${{ secrets.SCHEMA_REGISTRY_API_KEY }}
+  SCHEMA_REGISTRY_API_SECRET: ${{ secrets.SCHEMA_REGISTRY_API_SECRET }}
+jobs:
+  update-schema:
+    name: Deploy new Schema
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update the schema
+        run: ./updateSchema.sh
