@@ -1,6 +1,8 @@
 ame: Deploy Schema to Registry
 
 on:
+  watch:
+    types: [started]
   release:
     types: [created]
 
